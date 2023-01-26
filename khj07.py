@@ -3,20 +3,15 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 
+#money = pd.read_csv("money_data7.csv")
 
-money = pd.read_csv("money_data7.csv")
-
-st.sidebar.success("Select a demo above.")
+#st.sidebar.success("Select a demo above.")
 
 def  plotting_demo():
     money = pd.read_csv("money_data7.csv")
     option = st.selectbox(
         'How would you like to choice year ?',
         ('2020', '2021', '2022'))
-
-    option = st.selectbox(
-    'How would you like to choice year ?',
-    ('2020', '2021', '2022'))
 
     option2 = int(option)
 
@@ -49,7 +44,7 @@ def  plotting_demo():
 
     st.pyplot(fig)
     st.dataframe(money)
-    
+
 with st.form(key ='Form1'):
     with st.sidebar:
         
@@ -58,4 +53,3 @@ with st.form(key ='Form1'):
         
 if select_language =='line':        
     plotting_demo()      
-    
