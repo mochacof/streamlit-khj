@@ -6,7 +6,7 @@ import numpy as np
 
 money = pd.read_csv("money_data7.csv")
 
-#st.sidebar.success("Select a demo above.")
+st.sidebar.success("Select a demo above.")
 
 def  plotting_demo():
     money = pd.read_csv("money_data7.csv")
