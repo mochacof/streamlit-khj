@@ -8,7 +8,12 @@ import numpy as np
 #st.sidebar.success("Select a demo above.")
 
 def  plotting_demo():
-    money = pd.read_csv("money_data7.csv")
+    
+    uploaded_file = st.file_uploader("Choose a file")
+
+    money=pd.read_csv(uploaded_file)
+    
+    #money = pd.read_csv("money_data7.csv")
     option = st.selectbox(
         'How would you like to choice year ?',
         ('2020', '2021', '2022'))
@@ -53,3 +58,8 @@ with st.form(key ='Form1'):
         
 if select_language =='line':        
     plotting_demo()      
+    
+    try:
+          plotting_demo()  
+    except:      
+          pass
