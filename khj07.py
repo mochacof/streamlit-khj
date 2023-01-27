@@ -3,17 +3,14 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 
-#money = pd.read_csv("money_data7.csv")
-
-#st.sidebar.success("Select a demo above.")
 
 def  plotting_demo():
     
     uploaded_file = st.file_uploader("Choose a file")
 
     money=pd.read_csv(uploaded_file)
-    
-    #money = pd.read_csv("money_data7.csv")
+   # money = pd.read_csv("money_data7.csv")
+
     option = st.selectbox(
         'How would you like to choice year ?',
         ('2020', '2021', '2022'))
@@ -49,16 +46,15 @@ def  plotting_demo():
 
     st.pyplot(fig)
     st.dataframe(money)
+       
 
 with st.form(key ='Form1'):
     with st.sidebar:
         
-        select_language = st.sidebar.radio('What do you want ?', ('line', 'bar', 'pie','histogram','corr','word','box'))
+        select_language = st.sidebar.radio('What do you want ?', ('line', 'bar', 'pie'))
         
         
-if select_language =='line':        
-    plotting_demo()      
-    
+if select_language =='line':           
     try:
           plotting_demo()  
     except:      
