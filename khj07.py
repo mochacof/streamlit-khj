@@ -5,7 +5,6 @@ import numpy as np
 
 
 def  plotting_demo():
-st.sidebar.success("Select a demo above.")
     
     #uploaded_file = st.file_uploader("Choose a file")
 
