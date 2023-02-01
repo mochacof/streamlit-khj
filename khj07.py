@@ -3,8 +3,9 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 
-st.sidebar.success("Select a demo above.")
+
 def  plotting_demo():
+st.sidebar.success("Select a demo above.")
     
     #uploaded_file = st.file_uploader("Choose a file")
 
